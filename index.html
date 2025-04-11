@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="https://openlayers.org/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Using OpenLayers with Vite</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="side-bar-container">
+      <h2>Vector Layers</h2>
+      <input type="radio" name="baseLayerRadioBtn" value="OSMStandard" checked> OSM Standard<br>
+      <input type="radio" name="baseLayerRadioBtn" value="OSMHumanitarian"> OSM Humanitarian<br>
+      <input type="radio" name="baseLayerRadioBtn" value="OSMVectorTile"> OSM Vector Tile<br>
+      <input type="radio" name="baseLayerRadioBtn" value="StamenToner"> Stamen Toner<br>
+      <h2>Layers GeoJSON/KML</h2>
+      <input type="checkbox" name="layerCheckBox" value="EUCountriesGeoJSON">EU Countries GeoJSON <br>
+      <input type="checkbox" name="layerCheckBox" value="EUCountriesKML">EU Countries KML <br>
+      <input type="checkbox" name="layerCheckBox" value="HeatMapOnlineUsersFB">Heat Map FB Users<br>
+      <input type="checkbox" name="layerCheckBox" value="TileDebugLayer">Tile Debug Layer<br>
+    </div>
+
+    <div class="map-container">
+      <div id="map"></div>
+    </div>
+  </div>
+
+  <div class="overlay-container">
+    <span class="overlay-text" id="feature-name"></span> <br>
+    <span class="overlay-text" id="feature-additional-info"></span>
+  </div>
+
+  <!--Toto je potrebné skopírovať z mapTiler pre pridávanie štýlu-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.css">
+  <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/dist/ol.js"></script>
+  <script src="https://unpkg.com/ol-mapbox-style@12.1.1/dist/olms.js"></script>
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
